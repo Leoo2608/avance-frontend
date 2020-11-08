@@ -1,0 +1,35 @@
+<div class="center">
+    <mat-card id='margen-card' class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Registrar</mat-card-title>
+          <mat-card-subtitle>Lineas Académicas</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Linea Académica</mat-label>
+                <input matInput name="nombre" [(ngModel)]="lineaModel.nombre"  placeholder="Ingresar Nombre de Línea">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <!--<mat-label>Facultad-Campus</mat-label>
+                <mat-select>
+                  <mat-option value="option">FIA-Lima</mat-option>
+                </mat-select>-->
+                <input type="number" matInput name="id_unidad" [(ngModel)]="lineaModel.id_plan"  placeholder="Ingresar Unidad Académica">
+              </mat-form-field>
+            <mat-form-field appearance="fill">
+                <!--<mat-label>Escuela Profesional</mat-label>
+                <mat-select>
+                  <mat-option value="option">EP Ingeniería de Sistemas</mat-option>
+                </mat-select>-->
+              </mat-form-field>
+            <section>
+              <div>
+                <button mat-raised-button color="primary" (click)="create()">Registrar</button>
+            </div>
+            </section>
+        </mat-card-content>
+      </mat-card>
+</div>
+  
+

@@ -1,0 +1,10 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.color-upeu{
+  background-color: #7b1038;
+  color: white;
+}
+.bar-home{
+  display: none;
+}

@@ -1,0 +1,50 @@
+
+  <nav id='margen-card'class="center">
+    <table mat-table [dataSource]="lineas" class="mat-elevation-z8">
+      <tr mat-header-row *matHeaderRowDef="['ID_LINEA', 'NOMBRE', 'ID_PLAN','ESTADO', 'EDITAR', 'ELIMINAR']"></tr>
+      <tr mat-row *matRowDef="let fila; columns: ['ID_LINEA', 'NOMBRE','ID_PLAN' ,'ESTADO','EDITAR', 'ELIMINAR'];"></tr>
+      <ng-container matColumnDef="ID_LINEA">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let linea"> {{linea.ID_LINEA}} </td>
+      </ng-container>
+      <ng-container matColumnDef="NOMBRE">
+        <th mat-header-cell *matHeaderCellDef>Linea Académica</th>
+        <td mat-cell *matCellDef="let linea"> {{linea.NOMBRE}} </td>
+      </ng-container>
+      <ng-container matColumnDef="ID_PLAN">
+        <th mat-header-cell *matHeaderCellDef>Plan Académico</th>
+        <td mat-cell *matCellDef="let linea"> {{linea.ID_PLAN}} </td>
+      </ng-container>
+      <ng-container matColumnDef="ESTADO">
+        <th mat-header-cell *matHeaderCellDef>Estado</th>
+        <td mat-cell *matCellDef="let linea"> {{linea.ESTADO}} </td>
+      </ng-container>
+      <ng-container matColumnDef="EDITAR">
+        <th mat-header-cell *matHeaderCellDef>Editar</th>
+        <td mat-cell *matCellDef="let linea">
+          <a mat-icon-button [routerLink]="['/linea/editar', linea.ID_LINEA]">
+            <mat-icon (click)="traerid(linea.ID_LINEA)" color="primary">edit</mat-icon>
+          </a>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="ELIMINAR">
+        <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+        <td mat-cell *matCellDef="let linea">
+          <button (click)="delLinea(linea.ID_LINEA)" mat-icon-button>
+            <mat-icon color="warn">delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>  
+    </table>
+  </nav>
+  <div class="center">
+    <button mat-raised-button class="color-upeu" [routerLink]="['/linea/agregar']">Registrar Línea</button>
+  </div>
+  <div class="center">
+    <mat-form-field appearance="fill">
+      <mat-label>Seleccionar Línea</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let linea of lineas" value="option"> {{linea.NOMBRE}} </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>

@@ -1,0 +1,22 @@
+.example-card {
+    max-width: 400px;
+}
+  
+.example-header-image {
+    background-size: cover;
+}
+.login{
+    margin-top: 5%;
+}
+.centrado{
+    display: flex;
+    justify-content: center;
+}
+.login-input{
+    width: 350px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+.cuerpo-login{
+    background-image: url(/src/app/fondo/UPeU-Lima-2018.jpg);
+}

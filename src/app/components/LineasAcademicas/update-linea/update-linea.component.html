@@ -1,0 +1,28 @@
+<div class="center">
+    <mat-card id='margen-card' class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Actualizar Datos</mat-card-title>
+          <mat-card-subtitle>Lineas Académicas</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Linea Académica</mat-label>
+                <input matInput name="nombre" [(ngModel)]="lineaModel.nombre"  placeholder="Ingresar Nombre de Línea">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+            
+                <input type="number" matInput name="id_unidad" [(ngModel)]="lineaModel.id_plan"  placeholder="Ingresar Unidad Académica">
+              </mat-form-field>
+            <mat-form-field appearance="fill">
+         
+              </mat-form-field>
+            <section>
+              <div>
+                <button mat-raised-button color="primary" (click)="update()">Actualizar Registro</button>
+            </div>
+          
+            </section>
+        </mat-card-content>
+      </mat-card>
+</div>

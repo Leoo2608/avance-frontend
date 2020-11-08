@@ -1,0 +1,24 @@
+  
+.center {
+    display: flex;
+    justify-content: center;
+  }
+  .lado {
+    display: flex;
+    justify-content: right;
+  }
+  table {
+    width: 45%;
+  }
+  .add{
+      color: #00c853;
+      font-size: 40px;
+  }
+  #margen-card{
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+  }
+  .color-upeu{
+    background-color: #7b1038;
+    color: white;
+  }
